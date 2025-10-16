@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estructura del Juego</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      background: linear-gradient(135deg, #d1c4e9, #ede7f6);
+      padding: 40px;
+      text-align: center;
+      animation: fadeIn 1.5s;
+    }
+    h2 { color: #673ab7; }
+    ul { font-size: 18px; list-style: none; padding: 0; }
+    li { margin: 10px 0; }
+    img {
+      width: 300px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px;
+      background: #673ab7;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover { background: #4527a0; transform: scale(1.05); }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+    /* Mascota */
+    .mascota { position: fixed; bottom: 20px; left: 20px; animation: saltar 2s infinite; }
+    .mascota img { width: 100px; }
+    .globo {
+      position: absolute;
+      top: -80px;
+      left: 110px;
+      width: 220px;
+      padding: 12px;
+      background: white;
+      border-radius: 12px;
+      font-size: 14px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .globo::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 20px;
+      border-width: 15px 15px 0;
+      border-style: solid;
+      border-color: white transparent transparent;
+    }
+    @keyframes saltar { 0%, 100% { transform: translateY(0);} 50% { transform: translateY(-15px);} }
+  </style>
+</head>
+<body>
+  <h2>🧩 Estructura del Juego</h2>
+  <p><b>Materiales:</b></p>
+  <ul>
+    <li>🟦 Piezas de madera numeradas con resultados de MCM.</li>
+    <li>🃏 Tarjetas laminadas con preguntas y retos.</li>
+    <li>📖 Manual de reglas para guiar la partida.</li>
+    <li>📝 Hojas para resolver operaciones.</li>
+    <li>🎁 Caja contenedora del juego.</li>
+  </ul>
+  <img src="jenga.png" alt="Juego Jenga Matemático">
+  <a href="proyecto.html">⬅ Volver al inicio</a>
+
+  <!-- Mascota -->
+  <div class="mascota">
+    <img src="raton.png" alt="Mimo">
+    <div class="globo" id="globo">¡Aquí están los materiales del juego! 🧩</div>
+  </div>
+
+  <script>
+    const globo=document.getElementById("globo");
+    setInterval(()=>{
+      globo.style.display="block";
+      setTimeout(()=>{globo.style.display="none";},4000);
+    },10000);
+  </script>
+</body>
+</html>

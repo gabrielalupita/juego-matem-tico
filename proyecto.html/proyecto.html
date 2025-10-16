@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Múltiplos en Equilibrio</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f9f871, #ff8a65);
+      text-align: center;
+      animation: fadeIn 1.5s;
+    }
+    h1 {
+      color: white;
+      background: #ff5722;
+      padding: 20px;
+      margin: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    img { width: 300px; margin: 20px auto; display: block; }
+    a {
+      display: block;
+      margin: 15px auto;
+      padding: 15px;
+      width: 280px;
+      background: #ff5722;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    a:hover {
+      background: #e64a19;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    }
+    footer {
+      margin-top: 30px;
+      background: #333;
+      color: white;
+      padding: 15px;
+    }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+    /* Mascota */
+    .mascota {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      animation: saltar 2s infinite;
+      z-index: 999;
+    }
+    .mascota img { width: 100px; }
+    .globo {
+      position: absolute;
+      top: -80px;
+      left: 110px;
+      width: 200px;
+      padding: 12px;
+      background: white;
+      border-radius: 12px;
+      font-size: 14px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .globo::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 20px;
+      border-width: 15px 15px 0;
+      border-style: solid;
+      border-color: white transparent transparent;
+    }
+    @keyframes saltar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎲 MÚLTIPLOS EN EQUILIBRIO 🎲</h1>
+  <img src="logo.png" alt="Logo del juego">
+
+  <p>Explora cada sección del proyecto:</p>
+  <a href="nombre.html">📌 Nombre del juego</a>
+  <a href="integrantes.html">👥 Integrantes</a>
+  <a href="nivel.html">🏫 Nivel educativo</a>
+  <a href="pensamiento.html">🧠 Pensamiento matemático</a>
+  <a href="objetivos.html">🎯 Objetivos</a>
+  <a href="estructura.html">🧩 Estructura</a>
+
+  <footer>📘 Institución Educativa Liceo del Llano - 2025</footer>
+
+  <!-- Mascota -->
+  <div class="mascota">
+    <img src="raton.png" alt="Mimo el Ratón">
+    <div class="globo" id="globo">¡Hola! Soy Mimo 🐭 ¡vamos a jugar con el MCM!</div>
+  </div>
+
+  <script>
+    const globo = document.getElementById("globo");
+    setInterval(() => {
+      globo.style.display = "block";
+      setTimeout(() => { globo.style.display = "none"; }, 4000);
+    }, 10000);
+  </script>
+</body>
+</html>
+

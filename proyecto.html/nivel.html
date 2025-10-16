@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nivel Educativo</title>
+  <style>
+    body{font-family:"Comic Sans MS";background:linear-gradient(135deg,#f8bbd0,#fce4ec);padding:40px;text-align:center;animation:fadeIn 1.5s;}
+    h2{color:#e91e63;}
+    p{font-size:18px;}
+    img{width:300px;margin:20px auto;display:block;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+    a{display:inline-block;margin-top:20px;padding:12px;background:#e91e63;color:white;border-radius:8px;text-decoration:none;}
+    a:hover{background:#c2185b;transform:scale(1.05);}
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    .mascota{position:fixed;bottom:20px;left:20px;animation:saltar 2s infinite;}
+    .mascota img{width:100px;}
+    .globo{position:absolute;top:-80px;left:110px;width:220px;padding:12px;background:white;border-radius:12px;font-size:14px;display:none;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+    .globo::after{content:"";position:absolute;bottom:-15px;left:20px;border-width:15px 15px 0;border-style:solid;border-color:white transparent transparent;}
+    @keyframes saltar{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+  </style>
+</head>
+<body>
+  <h2>🏫 Nivel Educativo</h2>
+  <p>El juego está dirigido a <b>grados inferiores</b>, para que los niños identifiquen múltiplos, calculen el MCM y refuercen su aprendizaje con diversión.</p>
+  <img src="mimo2.png" alt="Nivel educativo con Mimo">
+  <a href="proyecto.html">⬅ Volver al inicio</a>
+
+  <div class="mascota">
+    <img src="raton.png" alt="Mimo">
+    <div class="globo" id="globo">¡Este juego es ideal para la escuela! 🏫</div>
+  </div>
+  <script>
+    const globo=document.getElementById("globo");
+    setInterval(()=>{globo.style.display="block";setTimeout(()=>{globo.style.display="none";},4000);},10000);
+  </script>
+</body>
+</html>

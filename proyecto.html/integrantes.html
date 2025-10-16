@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Integrantes</title>
+  <style>
+    body { font-family:"Comic Sans MS"; background:linear-gradient(135deg,#bbdefb,#e3f2fd); padding:40px; text-align:center; animation:fadeIn 1.5s;}
+    h2{color:#1976d2;}
+    ul{font-size:18px; list-style:none; padding:0;}
+    li{margin:10px 0;}
+    img{width:300px;margin:20px auto;display:block;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+    a{display:inline-block;margin-top:20px;padding:12px;background:#2196f3;color:white;border-radius:8px;text-decoration:none;}
+    a:hover{background:#1565c0;transform:scale(1.05);}
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    .mascota{position:fixed;bottom:20px;left:20px;animation:saltar 2s infinite;}
+    .mascota img{width:100px;}
+    .globo{position:absolute;top:-80px;left:110px;width:220px;padding:12px;background:white;border-radius:12px;font-size:14px;display:none;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+    .globo::after{content:"";position:absolute;bottom:-15px;left:20px;border-width:15px 15px 0;border-style:solid;border-color:white transparent transparent;}
+    @keyframes saltar{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+  </style>
+</head>
+<body>
+  <h2>👥 Integrantes</h2>
+  <ul>
+    <li>Helen Saray Zuluaga Rodrígues</li>
+    <li>Angie Katherine Navarro Marín</li>
+    <li>Gabriela Alejo Blanco</li>
+    <li>Cristhian Adrián Montañez Tabares</li>
+    <li>Sergio Augusto Anaya</li>
+  </ul>
+  <img src="jenga.png" alt="Equipo trabajando con Jenga">
+  <a href="proyecto.html">⬅ Volver al inicio</a>
+
+  <div class="mascota">
+    <img src="raton.png" alt="Mimo">
+    <div class="globo" id="globo">¡Somos un gran equipo! 👥</div>
+  </div>
+  <script>
+    const globo=document.getElementById("globo");
+    setInterval(()=>{globo.style.display="block";setTimeout(()=>{globo.style.display="none";},4000);},10000);
+  </script>
+</body>
+</html>
